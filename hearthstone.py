@@ -1,11 +1,13 @@
 import requests
 
+
 url = "https://raw.githubusercontent.com/rfilmyer/hearthstone-db/master/cards/all-cards.json"
 r = requests.get(url)
-#---------------------------------
+
 data = r.json()
-#---------------------------------
+
 hero_names = ['priest', 'warrior', 'mage', 'shaman', 'paladin', 'hunter', 'warlock', 'rogue', 'druid']
+
 for hero in hero_names:
     high_cost = 0
     high_cost_name = ''
